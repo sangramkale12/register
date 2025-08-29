@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+    }
+
+    .container {
+      width: 380px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      color: #fff;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .container h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .input-box {
+      position: relative;
+      margin: 15px 0;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .input-box input:focus {
+      background: rgba(255,255,255,0.3);
+      box-shadow: 0 0 10px #00c6ff;
+    }
+
+    .input-box label {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #ddd;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .input-box input:focus + label,
+    .input-box input:valid + label {
+      top: -8px;
+      left: 10px;
+      font-size: 0.8rem;
+      color: #00c6ff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    p a {
+      color: #00c6ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Create Account</h2>
+    <form>
+      <div class="input-box">
+        <input type="text" required>
+        <label>Full Name</label>
+      </div>
+      <div class="input-box">
+        <input type="email" required>
+        <label>Email</label>
+      </div>
+      <div class="input-box">
+        <input type="password" required>
+        <label>Password</label>
+      </div>
+      <div class="input-box">
+        <input type="password" required>
+        <label>Confirm Password</label>
+      </div>
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="#">Login</a></p>
+      <p>own:</p><h3>sangram kale</h3>
+    </form>
+  </div>
+</body>
+</html>
